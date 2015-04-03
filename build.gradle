@@ -1,3 +1,13 @@
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+buildscript {
+    dependencies { classpath 'com.android.tools.build:gradle:1.1.0' }
+    repositories { mavenCentral() }
+}
 
 apply plugin: 'com.android.library'
 
@@ -30,5 +40,7 @@ android {
 }
 
 dependencies {
-    compile project(':Common')
+    compile 'com.android.support:support-v4:22.0.0'
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:recyclerview-v7:22.0.0'
 }
